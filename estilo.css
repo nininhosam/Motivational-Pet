@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom left, rgb(94, 255, 201), rgb(0, 162, 255));
+}
+main {
+    min-height: 88vh;
+    margin: 1.5%;
+    padding: 1%;
+}
+div#items {
+    position: absolute;
+    width: 80%;
+    height: 88%;
+    min-height: 66vh;
+}
+.bowl {
+    position: absolute;
+    min-width: 150px;
+    right: 41%;
+    top: 66%;
+}
+.item {
+    position: absolute;
+    min-width: 50px;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 1000px;
+}
+.jar-active {
+    cursor: url('assets/jar_fixed.png'), auto;
+}
+img#petfood {
+    left: 5%;
+    top: 8%;
+}
+
+div#box {
+    background-color: white;
+    position: absolute;
+    padding: 10px;
+    left: 60%;
+    right: 10%;
+    top: 25%;
+    border-radius: 3vh;
+}
+p#speech {
+    font: normal clamp(8px, 4vw, 30px) arial;
+    margin: 2px;
+}
+div#centered {
+    align-items: center;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+    min-height: 400px;
+}
+img#pet {
+    min-width: 185px;
+    z-index: 2;
+}
+
+@media only screen and (max-height: 450px) and (max-width: 900px) {
+    img#pet {
+        min-width: 85px;
+        z-index: 2;
+    }
+
+    p#speech {
+        font: normal clamp(3px, 4vw, 15px) arial;
+        margin: 2px;
+    }
+    .bowl {
+        position: absolute;
+        min-width: 50px;
+        right: 60%;
+        top: 66%;
+    }
+    img#petfood {
+        height: 4em;
+        left: 5%;
+        top: 8%;
+    }
+}
+
+@media only screen and (max-height: 844px) and (max-width: 390px) {
+    html {
+        margin: 0;
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        height: 100%;
+    }
+    main {
+        height: 100%;
+    }
+    img#pet {
+        min-width: 90px;
+        z-index: 2;
+    }
+
+    p#speech {
+        font: normal clamp(3px, 4vw, 15px) arial;
+        margin: 2px;
+    }
+    .bowl {
+        position: absolute;
+        min-width: 50px;
+        right: 60%;
+        top: 66%;
+    }
+    img#petfood {
+        height: 4em;
+        left: 5%;
+        top: 8%;
+    }
+}
