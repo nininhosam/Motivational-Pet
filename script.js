@@ -1,6 +1,6 @@
 let assortment = [
     "have a good day!",
-    "No matter the how unlikely you are to hit it, Giving up is always a guaranteed miss",
+    "No matter how unlikely you are to hit it, Giving up is always a guaranteed miss",
     "Opportunities don't happen, you create them",
     "Success is not final; <br> Failure is not fatal; <br> It is the courage to continue that counts",
     "Don't focus on the pain, <br> Focus on the progress",
@@ -45,8 +45,15 @@ function emptyBowl() {
     bowl.setAttribute("src", "assets/bowl_empty.png");
 }
 function clicked(e) {
-    if (bod.className == "jar-active" && e.path[0].id != "petfood") {
-        if (e.path[0].id == "bowl") {
+    let userAgent = navigator.userAgent;
+    let target;
+    if(userAgent.match(/firefox|fxios/i)){
+        target = e.target.id;
+    } else {
+        target = e.path[0].id;
+    }
+    if (bod.className == "jar-active" && target != "petfood") {
+        if (target == "bowl") {
             pour.play();
             bowl.setAttribute("src", "assets/bowl_full.png");
             bod.className = "";
