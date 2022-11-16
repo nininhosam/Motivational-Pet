@@ -36,7 +36,7 @@ function grabJar() {
     if (bod.className == "") {
         shake.play()
         bod.classList.add('jar-active');
-        bod.style.cursor = `url('assets/jar_fixed.png'), auto`;
+        bod.style.cursor = `url('assets/jar.png'), auto`;
         pet.style.removeProperty('cursor');
         jar.style.removeProperty('cursor');
     }
